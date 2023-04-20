@@ -1,0 +1,42 @@
+{%extends 'base.html'%}
+
+{%block title_block%}
+<title>list</title>
+
+{%endblock%}
+
+
+
+{%block body_block%}
+        <div>
+            <table class="table table-stripped">
+                <tr>
+                    <th>task</th>
+                    <th>user</th>
+                    <th>status</th>
+                    <th>created_date</th>
+                    <th>Action</th>
+                </tr>
+    
+                {%for t in tasks%}
+    
+                <tr>
+                    <td>{{t.task_name}}</td>
+                    <td>{{t.user}}</td>
+                    <td>{{t.status}}</td>
+                    <td>{{t.created_date}}</td>
+                    <td>
+                        
+                        <a href="{%url 'task-detail' t.id%}" class="btn btn-outline-danger">view</a>
+                        <a href="{%url 'task-edit' t.id%}" class="btn btn-outline-danger">Edit</a>
+                        <a href="{%url 'task-delete' t.id%}" class="btn btn-outline-danger">delete</a>
+                    </td>
+                </tr>
+                {%endfor%}
+    
+            </table>
+    
+        </div>
+    
+
+{%endblock%}

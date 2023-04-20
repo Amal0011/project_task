@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+
+{%block title_block%}
+<title>Detail </title>
+
+{%endblock%}
+
+
+
+{%block body_block%}
+
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        
+        <div class="card bg-danger" style="width: 19rem;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item " style="background-color: rgb(67, 96, 123);">Task: {{task.task_name}}</li>
+              <li class="list-group-item " style="background-color: rgb(67, 96, 123);">User: {{task.user}}</li>
+              <li class="list-group-item " style="background-color: rgb(67, 96, 123);">Status: {{task.status}}</li>
+              <li class="list-group-item " style="background-color: rgb(67, 96, 123);">Created Date: {{task.created_date}}</li>
+            </ul>
+            
+          </div>
+
+
+
+    </div>
+    <div class="col-2"></div>
+
+</div>
+
+{%endblock%}
+
+

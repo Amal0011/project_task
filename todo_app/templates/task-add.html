@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+
+{%block title_block%}
+<title>todo-add</title>
+
+{%endblock%}
+
+
+
+{%block body_block%}
+
+<form style="margin-left: 400px;margin-top: 50px;" action="" method="post" enctype="multipart/form-data">
+
+    {%csrf_token%}
+    {{form.as_p}}
+    <input style="margin-left: 80px;" type="submit" value="add" class="btn btn-outline-success">
+</form>
+
+{%endblock%}
+
